@@ -24,15 +24,16 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1;
 }
 
 button {
@@ -52,6 +53,22 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  gap: 25px;
+  font-size: 18px;
+}
+
+.nav-items li {
+  list-style: none;
 }
 
 @media (prefers-color-scheme: light) {
