@@ -71,6 +71,12 @@ nav {
   list-style: none;
 }
 
+input{
+  width: 300px;
+  height: 28px;
+  margin-bottom: 8px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
