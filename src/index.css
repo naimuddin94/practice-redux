@@ -71,16 +71,27 @@ nav {
   list-style: none;
 }
 
-input{
+input {
   width: 300px;
   height: 28px;
   margin-bottom: 8px;
 }
 
-.form-container{
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+table {
+  width: 100vw;
+}
+
+table,
+th,
+td {
+  text-align: center;
+  border: 1px solid white;
+  border-collapse: collapse;
 }
 
 @media (prefers-color-scheme: light) {

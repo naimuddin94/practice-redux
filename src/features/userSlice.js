@@ -8,12 +8,12 @@ const initialState = {
 
 export const asyncGetUsers = createAsyncThunk("fetch/users", async () => {
   const users = await getUsers();
-  return users;
+  return users.data;
 });
 
 export const asyncCreateUser = createAsyncThunk("create/user", async (user) => {
   const response = await createUser(user);
-  return response;
+  return response.data;
 });
 
 const userSlice = createSlice({
@@ -25,8 +25,6 @@ const userSlice = createSlice({
         state.status = "loading";
       })
       .addCase(asyncGetUsers.fulfilled, (state, action) => {
-        console.log(action.payload);
-        console.log(state);
         state.status = "idle";
         state.users = action.payload;
       })

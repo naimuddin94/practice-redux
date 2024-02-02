@@ -8,11 +8,31 @@ const Home = () => {
     dispatch(asyncGetUsers());
   }, []);
 
-  const users = useSelector((state) => state.user);
-  console.log(users);
+  const { users, status } = useSelector((state) => state.user);
+
   return (
     <div>
-      <h1>Home page here</h1>
+      <h2>All Users</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user, index) => (
+            <tr key={user._id}>
+              <td>{index + 1}</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.password}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
